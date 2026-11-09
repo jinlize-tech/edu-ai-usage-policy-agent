@@ -2,10 +2,10 @@
   "product_id": "JLZ-EDU-AG-032",
   "repository_name": "edu-ai-usage-policy-agent",
   "product_type": "Agent",
-  "version": "1.0.0",
-  "package_path": "dist/edu-ai-usage-policy-agent-v1.0.0.zip",
-  "sha256": "C656A13FE67286848CBE019831103018D970F2FBA9C1B98FA324C0D4034C4C00",
-  "bytes": 47251,
+  "version": "1.0.1",
+  "package_path": "dist/edu-ai-usage-policy-agent-v1.0.1.zip",
+  "sha256": "99A22DD94A6BB685B47FA71FDBD697508E5E9A119E3BFC1ECBD02C5666010B59",
+  "bytes": 48394,
   "entries": [
     "edu-ai-usage-policy-agent/README.md",
     "edu-ai-usage-policy-agent/PRODUCT_SPEC.md",
@@ -38,5 +38,9 @@
   "license": "Apache-2.0",
   "runtime_status": "MODEL_RUNTIME_NOT_VERIFIED",
   "workbuddy_validation": "NOT_EXECUTED",
-  "built_at": "2026-11-09T00:00:00+08:00"
+  "built_at": "2026-11-09T12:02:19.244566+00:00",
+  "previous_version": "1.0.0",
+  "previous_package_path": "dist/edu-ai-usage-policy-agent-v1.0.0.zip",
+  "previous_package_sha256": "C656A13FE67286848CBE019831103018D970F2FBA9C1B98FA324C0D4034C4C00",
+  "patch_reason": "README_USAGE_INSTALLATION_AND_PLATFORM_METADATA_FINALIZATION"
 }

@@ -5,7 +5,7 @@
   "product_type": "Agent",
   "repository_name": "edu-ai-usage-policy-agent",
   "repository_url": "https://github.com/jinlize-tech/edu-ai-usage-policy-agent",
-  "product_version": "1.0.0",
+  "product_version": "1.0.1",
   "batch": 1,
   "business_category": "15 数字治理与AI合规中心",
   "high_risk": true,

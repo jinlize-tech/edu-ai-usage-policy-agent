@@ -9,7 +9,7 @@
   "product_type": "Agent",
   "category": "15 数字治理与AI合规中心",
   "batch": 1,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "Apache-2.0",
   "core_outputs": [
     "AI使用政策",
@@ -25,8 +25,13 @@
   "high_risk": true,
   "deterministic": false,
   "scenario_count": 14,
-  "package_path": "dist/edu-ai-usage-policy-agent-v1.0.0.zip",
+  "package_path": "dist/edu-ai-usage-policy-agent-v1.0.1.zip",
   "runtime_status": "MODEL_RUNTIME_NOT_VERIFIED",
   "workbuddy_validation": "NOT_EXECUTED",
-  "status": "LOCAL_DEVELOPMENT_COMPLETE_PENDING_REMOTE_VERIFICATION"
+  "status": "DOCUMENTATION_AND_METADATA_PATCH_1.0.1_BUILT_PENDING_REMOTE_VERIFICATION",
+  "previous_version": "1.0.0",
+  "previous_package_path": "dist/edu-ai-usage-policy-agent-v1.0.0.zip",
+  "previous_package_sha256": "C656A13FE67286848CBE019831103018D970F2FBA9C1B98FA324C0D4034C4C00",
+  "package_state": "PATCH_PACKAGE_V1.0.1_BUILT",
+  "readme_repair": "README_USAGE_INSTALLATION_ALIGNED_WITH_PACKAGE_CONTENTS"
 }
