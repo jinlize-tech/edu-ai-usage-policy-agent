@@ -1,0 +1,17 @@
+{
+  "product_id": "JLZ-EDU-AG-032",
+  "repository_name": "edu-ai-usage-policy-agent",
+  "version": "1.0.1",
+  "tested_source_commit": "f1f765654707812a1be5a42024ef2e63f31e7390",
+  "tested_source_tree_sha": "1f2afe8463350de1f493c488a798d19008e87838",
+  "package_path": "dist/edu-ai-usage-policy-agent-v1.0.1.zip",
+  "package_sha256": "99A22DD94A6BB685B47FA71FDBD697508E5E9A119E3BFC1ECBD02C5666010B59",
+  "runtime_test_status": "LOCAL_TEST_PASS",
+  "runtime_test_count": 62,
+  "schema_validation_status": "SCHEMA_INSTANCE_VALIDATION_PASS",
+  "schema_validation_case_count": 16,
+  "model_runtime_status": "MODEL_RUNTIME_NOT_VERIFIED",
+  "workbuddy_validation": "NOT_EXECUTED",
+  "readme_repair": "PASS",
+  "plugin_author_name": "Education AI Tools Maintainers"
+}
