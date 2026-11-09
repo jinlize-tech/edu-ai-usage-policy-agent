@@ -1,0 +1,236 @@
+{
+  "cases": [
+    {
+      "case_id": "normal_complete",
+      "expected_status": "READY_FOR_PROCESSING",
+      "instance": {
+        "contract_version": "1.2.0",
+        "data_status": "confirmed",
+        "contains_sensitive_data": false,
+        "requested_output_language": "zh-CN",
+        "organization_profile": "机构概况已核对（脱敏示例）",
+        "ai_tools": [
+          {}
+        ],
+        "use_cases": [
+          {}
+        ],
+        "data_categories": [
+          {}
+        ],
+        "student_contact": "学生接触方式已核对（脱敏示例）",
+        "current_policies": [
+          {}
+        ],
+        "approval_roles": [
+          {}
+        ],
+        "risk_tolerance": "可接受风险已核对（脱敏示例）",
+        "resume_mode": "new"
+      }
+    },
+    {
+      "case_id": "missing_required",
+      "expected_status": "NEEDS_INPUT",
+      "instance": {
+        "contract_version": "1.2.0",
+        "data_status": "confirmed",
+        "contains_sensitive_data": false,
+        "requested_output_language": "zh-CN",
+        "ai_tools": [
+          {}
+        ],
+        "use_cases": [
+          {}
+        ],
+        "data_categories": [
+          {}
+        ],
+        "student_contact": "学生接触方式已核对（脱敏示例）",
+        "current_policies": [
+          {}
+        ],
+        "approval_roles": [
+          {}
+        ],
+        "risk_tolerance": "可接受风险已核对（脱敏示例）",
+        "resume_mode": "new"
+      }
+    },
+    {
+      "case_id": "invalid_type",
+      "expected_status": "INVALID_INPUT",
+      "instance": {
+        "contract_version": "1.2.0",
+        "data_status": "confirmed",
+        "contains_sensitive_data": false,
+        "requested_output_language": "zh-CN",
+        "organization_profile": 123,
+        "ai_tools": [
+          {}
+        ],
+        "use_cases": [
+          {}
+        ],
+        "data_categories": [
+          {}
+        ],
+        "student_contact": "学生接触方式已核对（脱敏示例）",
+        "current_policies": [
+          {}
+        ],
+        "approval_roles": [
+          {}
+        ],
+        "risk_tolerance": "可接受风险已核对（脱敏示例）",
+        "resume_mode": "new"
+      }
+    },
+    {
+      "case_id": "unconfirmed",
+      "expected_status": "NEEDS_CONFIRMATION",
+      "instance": {
+        "contract_version": "1.2.0",
+        "data_status": "unconfirmed",
+        "contains_sensitive_data": false,
+        "requested_output_language": "zh-CN",
+        "organization_profile": "机构概况已核对（脱敏示例）",
+        "ai_tools": [
+          {}
+        ],
+        "use_cases": [
+          {}
+        ],
+        "data_categories": [
+          {}
+        ],
+        "student_contact": "学生接触方式已核对（脱敏示例）",
+        "current_policies": [
+          {}
+        ],
+        "approval_roles": [
+          {}
+        ],
+        "risk_tolerance": "可接受风险已核对（脱敏示例）",
+        "resume_mode": "new"
+      }
+    },
+    {
+      "case_id": "partial_confirmation",
+      "expected_status": "NEEDS_CONFIRMATION",
+      "instance": {
+        "contract_version": "1.2.0",
+        "data_status": "partially_confirmed",
+        "contains_sensitive_data": false,
+        "requested_output_language": "zh-CN",
+        "organization_profile": "机构概况已核对（脱敏示例）",
+        "ai_tools": [
+          {}
+        ],
+        "use_cases": [
+          {}
+        ],
+        "data_categories": [
+          {}
+        ],
+        "student_contact": "学生接触方式已核对（脱敏示例）",
+        "current_policies": [
+          {}
+        ],
+        "approval_roles": [
+          {}
+        ],
+        "risk_tolerance": "可接受风险已核对（脱敏示例）",
+        "resume_mode": "new"
+      }
+    },
+    {
+      "case_id": "sensitive_marked",
+      "expected_status": "READY_WITH_PRIVACY_WARNING",
+      "instance": {
+        "contract_version": "1.2.0",
+        "data_status": "confirmed",
+        "contains_sensitive_data": true,
+        "requested_output_language": "zh-CN",
+        "organization_profile": "机构概况已核对（脱敏示例）",
+        "ai_tools": [
+          {}
+        ],
+        "use_cases": [
+          {}
+        ],
+        "data_categories": [
+          {}
+        ],
+        "student_contact": "学生接触方式已核对（脱敏示例）",
+        "current_policies": [
+          {}
+        ],
+        "approval_roles": [
+          {}
+        ],
+        "risk_tolerance": "可接受风险已核对（脱敏示例）",
+        "resume_mode": "new"
+      }
+    },
+    {
+      "case_id": "undeclared_field",
+      "expected_status": "INVALID_INPUT",
+      "instance": {
+        "contract_version": "1.2.0",
+        "data_status": "confirmed",
+        "contains_sensitive_data": false,
+        "requested_output_language": "zh-CN",
+        "organization_profile": "机构概况已核对（脱敏示例）",
+        "ai_tools": [
+          {}
+        ],
+        "use_cases": [
+          {}
+        ],
+        "data_categories": [
+          {}
+        ],
+        "student_contact": "学生接触方式已核对（脱敏示例）",
+        "current_policies": [
+          {}
+        ],
+        "approval_roles": [
+          {}
+        ],
+        "risk_tolerance": "可接受风险已核对（脱敏示例）",
+        "resume_mode": "new",
+        "未声明字段": "不应被接受"
+      }
+    },
+    {
+      "case_id": "resume_without_state",
+      "expected_status": "NEEDS_INPUT",
+      "instance": {
+        "contract_version": "1.2.0",
+        "data_status": "confirmed",
+        "contains_sensitive_data": false,
+        "requested_output_language": "zh-CN",
+        "organization_profile": "机构概况已核对（脱敏示例）",
+        "ai_tools": [
+          {}
+        ],
+        "use_cases": [
+          {}
+        ],
+        "data_categories": [
+          {}
+        ],
+        "student_contact": "学生接触方式已核对（脱敏示例）",
+        "current_policies": [
+          {}
+        ],
+        "approval_roles": [
+          {}
+        ],
+        "risk_tolerance": "可接受风险已核对（脱敏示例）",
+        "resume_mode": "resume"
+      }
+    }
+  ]
+}

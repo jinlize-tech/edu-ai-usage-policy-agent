@@ -1,0 +1,114 @@
+{
+  "contract_version": "1.2.0",
+  "product_id": "JLZ-EDU-AG-032",
+  "product_name": "教育机构AI使用政策制定",
+  "product_type": "Agent",
+  "repository_name": "edu-ai-usage-policy-agent",
+  "repository_url": "https://github.com/jinlize-tech/edu-ai-usage-policy-agent",
+  "product_version": "1.0.0",
+  "batch": 1,
+  "business_category": "15 数字治理与AI合规中心",
+  "high_risk": true,
+  "deterministic": false,
+  "agent": true,
+  "core_outputs": [
+    "AI使用政策",
+    "场景红黄绿表",
+    "审批流程"
+  ],
+  "optional_outputs": [
+    "数据输入清单",
+    "核验责任",
+    "培训问答",
+    "巡检表"
+  ],
+  "all_outputs": [
+    "AI使用政策",
+    "场景红黄绿表",
+    "审批流程",
+    "数据输入清单",
+    "核验责任",
+    "培训问答",
+    "巡检表"
+  ],
+  "human_review_required": true,
+  "reviewer_role": "负责人/教学/IT/法务",
+  "commercial_boundary": null,
+  "input_required": [
+    "contract_version",
+    "data_status",
+    "contains_sensitive_data",
+    "organization_profile",
+    "ai_tools",
+    "use_cases",
+    "data_categories",
+    "student_contact",
+    "approval_roles",
+    "risk_tolerance"
+  ],
+  "input_properties": {
+    "contract_version": {
+      "type": "string"
+    },
+    "data_status": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "partially_confirmed",
+        "unconfirmed"
+      ]
+    },
+    "contains_sensitive_data": {
+      "type": "boolean"
+    },
+    "requested_output_language": {
+      "type": "string",
+      "enum": [
+        "zh-CN",
+        "en"
+      ],
+      "default": "zh-CN"
+    },
+    "organization_profile": {
+      "type": "string"
+    },
+    "ai_tools": {
+      "type": "array"
+    },
+    "use_cases": {
+      "type": "array"
+    },
+    "data_categories": {
+      "type": "array"
+    },
+    "student_contact": {
+      "type": "string"
+    },
+    "current_policies": {
+      "type": "array"
+    },
+    "approval_roles": {
+      "type": "array"
+    },
+    "risk_tolerance": {
+      "type": "string"
+    },
+    "resume_mode": {
+      "type": "string",
+      "enum": [
+        "new",
+        "resume",
+        "target_change",
+        "stage_rollback"
+      ],
+      "default": "new"
+    },
+    "agent_state": {
+      "type": "object"
+    }
+  },
+  "expected_scenario_count": 14,
+  "license": "Apache-2.0",
+  "runtime_status": "MODEL_RUNTIME_NOT_VERIFIED",
+  "workbuddy_validation": "NOT_EXECUTED"
+}

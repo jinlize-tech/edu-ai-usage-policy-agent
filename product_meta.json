@@ -1,0 +1,32 @@
+{
+  "number": 32,
+  "product_id": "JLZ-EDU-AG-032",
+  "candidate_id": "CAND-049",
+  "chinese_name": "教育机构AI使用政策制定",
+  "english_name": "Education AI Usage Policy Agent",
+  "repository_name": "edu-ai-usage-policy-agent",
+  "repository_url": "https://github.com/jinlize-tech/edu-ai-usage-policy-agent",
+  "product_type": "Agent",
+  "category": "15 数字治理与AI合规中心",
+  "batch": 1,
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "core_outputs": [
+    "AI使用政策",
+    "场景红黄绿表",
+    "审批流程"
+  ],
+  "optional_outputs": [
+    "数据输入清单",
+    "核验责任",
+    "培训问答",
+    "巡检表"
+  ],
+  "high_risk": true,
+  "deterministic": false,
+  "scenario_count": 14,
+  "package_path": "dist/edu-ai-usage-policy-agent-v1.0.0.zip",
+  "runtime_status": "MODEL_RUNTIME_NOT_VERIFIED",
+  "workbuddy_validation": "NOT_EXECUTED",
+  "status": "LOCAL_DEVELOPMENT_COMPLETE_PENDING_REMOTE_VERIFICATION"
+}

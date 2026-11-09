@@ -1,0 +1,63 @@
+{
+  "name": "edu-ai-usage-policy-agent",
+  "version": "1.0.0",
+  "description": "A multi-step education agent for Education AI Usage Policy Agent.",
+  "author": {
+    "name": "广州金励泽科技服务有限公司",
+    "email": "270911570+yangsongbaofu-dot@users.noreply.github.com"
+  },
+  "agents": [
+    "./agents/edu-ai-usage-policy-agent.md"
+  ],
+  "expertType": "agent",
+  "agentName": "edu-ai-usage-policy-agent",
+  "displayName": {
+    "en": "Education AI Usage Policy Agent",
+    "zh": "教育机构AI使用政策制定"
+  },
+  "profession": {
+    "en": "Education AI Usage Policy Agent",
+    "zh": "教育机构AI使用政策制定"
+  },
+  "displayDescription": {
+    "en": "Multi-step professional workflow for Education AI Usage Policy Agent.",
+    "zh": "结合业务场景与平台规则制定AI使用政策、审批流程、人工核验、数据分级和违规处理。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "15-Education",
+  "defaultInitPrompt": {
+    "en": "Help me complete Education AI Usage Policy Agent.",
+    "zh": "请帮我完成一次教育机构AI使用政策制定"
+  },
+  "plugin": "edu-ai-usage-policy-agent",
+  "tags": [
+    {
+      "en": "Education",
+      "zh": "教培机构"
+    },
+    {
+      "en": "Professional Workflow",
+      "zh": "专业工作流"
+    },
+    {
+      "en": "Education AI Usage Policy Agent",
+      "zh": "教育机构AI使用政策制定"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Help me complete Education AI Usage Policy Agent.",
+      "zh": "请帮我完成一次教育机构AI使用政策制定"
+    },
+    {
+      "en": "Start with scope and evidence inventory.",
+      "zh": "请先确认范围并盘点资料"
+    },
+    {
+      "en": "Generate the final deliverables with risks and open questions.",
+      "zh": "请生成最终成果，并列出风险与待确认事项"
+    }
+  ],
+  "homepage": "https://github.com/jinlize-tech/edu-ai-usage-policy-agent",
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,452 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.jinlize.tech/education/JLZ-EDU-AG-032/input.schema.json",
+  "title": "教育机构AI使用政策制定输入契约",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "data_status",
+    "contains_sensitive_data",
+    "organization_profile",
+    "ai_tools",
+    "use_cases",
+    "data_categories",
+    "student_contact",
+    "approval_roles",
+    "risk_tolerance"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "1.2.0"
+    },
+    "data_status": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "partially_confirmed",
+        "unconfirmed"
+      ],
+      "description": "输入资料的确认状态"
+    },
+    "contains_sensitive_data": {
+      "type": "boolean"
+    },
+    "requested_output_language": {
+      "type": "string",
+      "enum": [
+        "zh-CN",
+        "en"
+      ],
+      "default": "zh-CN"
+    },
+    "organization_profile": {
+      "title": "机构概况",
+      "description": "业务、角色和用户群",
+      "type": "string",
+      "minLength": 1
+    },
+    "ai_tools": {
+      "title": "现有AI工具",
+      "description": "名称、用途、数据输入和输出",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "use_cases": {
+      "title": "AI使用场景",
+      "description": "备课、教研、营销、客服等",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "data_categories": {
+      "title": "数据类别",
+      "description": "学生、家长、教师和经营信息",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "student_contact": {
+      "title": "学生接触方式",
+      "description": "是否直接互动及年龄范围",
+      "type": "string",
+      "minLength": 1
+    },
+    "current_policies": {
+      "title": "现有制度",
+      "description": "隐私、采购、内容审核",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "approval_roles": {
+      "title": "审批角色",
+      "description": "教学、IT、合规和管理",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "risk_tolerance": {
+      "title": "可接受风险",
+      "description": "由负责人确认，不由模型设定",
+      "type": "string",
+      "minLength": 1
+    },
+    "resume_mode": {
+      "type": "string",
+      "enum": [
+        "new",
+        "resume",
+        "target_change",
+        "stage_rollback"
+      ],
+      "default": "new"
+    },
+    "agent_state": {
+      "type": "object",
+      "required": [
+        "state_version",
+        "product_id",
+        "current_stage",
+        "stage_status",
+        "completed_stages",
+        "confirmed_facts",
+        "open_questions",
+        "human_confirmation",
+        "recovery_context",
+        "change_log",
+        "minimal_context"
+      ],
+      "properties": {
+        "state_version": {
+          "const": "1.2.0"
+        },
+        "product_id": {
+          "const": "JLZ-EDU-AG-032"
+        },
+        "current_stage": {
+          "type": "string",
+          "enum": [
+            "S1_SCOPE_CONFIRMATION",
+            "S2_EVIDENCE_INVENTORY",
+            "S3_PROFESSIONAL_DIAGNOSIS",
+            "S4_SOLUTION_DESIGN",
+            "S5_HUMAN_CONFIRMATION",
+            "S6_FINAL_DELIVERY",
+            "PAUSED",
+            "FAILED"
+          ]
+        },
+        "stage_status": {
+          "type": "string",
+          "enum": [
+            "in_progress",
+            "paused",
+            "completed",
+            "failed"
+          ]
+        },
+        "completed_stages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "S1_SCOPE_CONFIRMATION",
+              "S2_EVIDENCE_INVENTORY",
+              "S3_PROFESSIONAL_DIAGNOSIS",
+              "S4_SOLUTION_DESIGN",
+              "S5_HUMAN_CONFIRMATION",
+              "S6_FINAL_DELIVERY"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "confirmed_facts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "fact_id",
+              "statement",
+              "source_refs",
+              "confirmed_by"
+            ],
+            "properties": {
+              "fact_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "statement": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "confirmed_by": {
+                "type": "string",
+                "minLength": 1
+              },
+              "confirmed_at": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "question_id",
+              "question",
+              "blocking",
+              "owner"
+            ],
+            "properties": {
+              "question_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "question": {
+                "type": "string",
+                "minLength": 1
+              },
+              "blocking": {
+                "type": "boolean"
+              },
+              "owner": {
+                "type": "string"
+              },
+              "needed_for": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "human_confirmation": {
+          "type": "object",
+          "required": [
+            "required",
+            "status"
+          ],
+          "properties": {
+            "required": {
+              "type": "boolean"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "not_required",
+                "pending",
+                "confirmed",
+                "rejected"
+              ]
+            },
+            "review_scope": {
+              "type": "string"
+            },
+            "confirmed_by": {
+              "type": "string"
+            },
+            "confirmed_at": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "recovery_context": {
+          "type": "object",
+          "required": [
+            "last_stable_stage",
+            "resume_instruction",
+            "affected_stages",
+            "can_resume"
+          ],
+          "properties": {
+            "last_stable_stage": {
+              "type": "string",
+              "enum": [
+                "S1_SCOPE_CONFIRMATION",
+                "S2_EVIDENCE_INVENTORY",
+                "S3_PROFESSIONAL_DIAGNOSIS",
+                "S4_SOLUTION_DESIGN",
+                "S5_HUMAN_CONFIRMATION",
+                "S6_FINAL_DELIVERY",
+                "PAUSED",
+                "FAILED"
+              ]
+            },
+            "resume_instruction": {
+              "type": "string",
+              "minLength": 1
+            },
+            "affected_stages": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "S1_SCOPE_CONFIRMATION",
+                  "S2_EVIDENCE_INVENTORY",
+                  "S3_PROFESSIONAL_DIAGNOSIS",
+                  "S4_SOLUTION_DESIGN",
+                  "S5_HUMAN_CONFIRMATION",
+                  "S6_FINAL_DELIVERY",
+                  "PAUSED",
+                  "FAILED"
+                ]
+              },
+              "uniqueItems": true
+            },
+            "can_resume": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "change_log": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "event_type",
+              "reason",
+              "affected_stages",
+              "occurred_at"
+            ],
+            "properties": {
+              "event_type": {
+                "type": "string",
+                "enum": [
+                  "resume",
+                  "target_change",
+                  "stage_rollback",
+                  "interruption"
+                ]
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "from_stage": {
+                "type": "string",
+                "enum": [
+                  "S1_SCOPE_CONFIRMATION",
+                  "S2_EVIDENCE_INVENTORY",
+                  "S3_PROFESSIONAL_DIAGNOSIS",
+                  "S4_SOLUTION_DESIGN",
+                  "S5_HUMAN_CONFIRMATION",
+                  "S6_FINAL_DELIVERY",
+                  "PAUSED",
+                  "FAILED"
+                ]
+              },
+              "to_stage": {
+                "type": "string",
+                "enum": [
+                  "S1_SCOPE_CONFIRMATION",
+                  "S2_EVIDENCE_INVENTORY",
+                  "S3_PROFESSIONAL_DIAGNOSIS",
+                  "S4_SOLUTION_DESIGN",
+                  "S5_HUMAN_CONFIRMATION",
+                  "S6_FINAL_DELIVERY",
+                  "PAUSED",
+                  "FAILED"
+                ]
+              },
+              "affected_stages": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "S1_SCOPE_CONFIRMATION",
+                    "S2_EVIDENCE_INVENTORY",
+                    "S3_PROFESSIONAL_DIAGNOSIS",
+                    "S4_SOLUTION_DESIGN",
+                    "S5_HUMAN_CONFIRMATION",
+                    "S6_FINAL_DELIVERY",
+                    "PAUSED",
+                    "FAILED"
+                  ]
+                },
+                "uniqueItems": true
+              },
+              "occurred_at": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "minimal_context": {
+          "type": "object",
+          "required": [
+            "user_goal",
+            "scope"
+          ],
+          "properties": {
+            "user_goal": {
+              "type": "string",
+              "minLength": 1
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1
+            },
+            "constraints": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "last_user_instruction": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "resume_mode"
+        ],
+        "properties": {
+          "resume_mode": {
+            "enum": [
+              "resume",
+              "target_change",
+              "stage_rollback"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "agent_state"
+        ]
+      }
+    }
+  ]
+}
